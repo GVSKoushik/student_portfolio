@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/79681b3232.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>PORTFOLIO</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://drive.google.com/file/d/1JzenFAvnNn5Xh0Ca4hpcbB-uKkMBA5dT/view?usp=sharing">My CV</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <center>
+            <div class="header-txt">
+                <h1>Hey!! This is <span>Koushik</span></h1>
+                <p class="intro-subtitle" id="intro-loader">Student</p>
+            </div>
+            </center>
+        </div>
+    </div>
+
+    <!------------------- ABOUT -------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-1">
+                    <img src="images/pic.jpg" alt="image">
+                </div>
+                <div class="about-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p style="color: bisque;">Enthusiastic student who is driven by passion and has a solid academic background.<br>
+                       Possesses problem-solving, communication and analytical capabilities.<br>
+                       Eager to advance my knowledge and obtain real-world experience.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C</span><br></li>
+                                <li><span>C++</span><br></li>
+                                <li><span>HTML</span><br></li>
+                                <li><span>CSS</span><br></li>
+                                <li><span>JavaScript</span><br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022 - Present</span><br>SRM University AP.</li>
+                                <li><span>2020 - 2022</span><br>SR Jr. College.</li>
+                                <li><span>2019 - 2020</span><br>Kennedy High School.</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------- SERVICES ------------------>
+     <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend</h2>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Backend</h2>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>App Design</h2>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <!------------------- PORTFOLIO ------------------>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/library.jpg" alt="img">
+                    <div class="layer">
+                        <h1><strong>Library Management System</strong></h1>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/e-commerce.jpg" alt="img">
+                    <div class="layer">
+                        <h1><strong>E-Commerce Website</strong></h1>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/portfolio.jpg" alt="img">
+                    <div class="layer">
+                        <h1><strong>Portfolio</strong></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-------------------- CONTACT -------------------->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-l">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i><strong>koushik.gourisetty@gmail.com</strong></p>
+                    <p><i class="fa-solid fa-phone"></i><strong>7270076007</strong></p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_koushikgourisetty_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/koushikgourisetty/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/GVSKoushik" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-r">
+                    <form>
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                        <button type="submit" class="btn b2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+    <div class="copyright">
+        <p>Developed by Koushik &copy; 2024. All rights reserved.</p>
+    </div>
+
+    <!---------------- JAVASCRIPT---------------->
+    <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu()
+    {
+        sidemenu.style.right="0";
+    }
+    function closemenu()
+    {
+        sidemenu.style.right="-200px";
+    }
+
+    window.onload=function()
+    {
+        setInterval(loadIntro, 2000)
+    }
+    var intros=["Engineer","Student"]
+    var index=0;
+    var intro=document.getElementById("intro-loader")
+    function loadIntro()
+    {
+        intro.innerHTML=intros[index];
+        intro.classList.add("fade");
+        index++;
+        if(index>=intros.length) 
+        {
+          index=0;
+        }
+      }
+    </script>
+</body>
+</html>
